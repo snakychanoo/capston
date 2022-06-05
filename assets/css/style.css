@@ -26,7 +26,170 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
+/*--------------------------------------------------------------
+# Calendar, 거래내역 page, 기간 선택
+--------------------------------------------------------------*/
+.cal-container {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
 
+/* 기간 버튼, input -> cal 로 변경 */
+.cal {
+  /* padding: 30px 10px !important; */
+  /* border: 1px solid lightgrey !important; */
+  border: 1px solid rgb(65, 65, 65) !important;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff !important;
+  color: lightgrey !important;
+  font-size: 18px !important;
+  letter-spacing: 1px;
+  position: relative;
+  font-weight: bold !important
+}
+.cal-position {
+  text-align: center !important
+}
+
+input:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #512DA8;
+  outline-width: 0
+}
+
+::placeholder {
+  color: #BDBDBD;
+  opacity: 1
+}
+
+:-ms-input-placeholder {
+  color: #BDBDBD
+}
+
+::-ms-input-placeholder {
+  color: #BDBDBD
+}
+/* 달력 틀 */
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0
+}
+/* datepicker */
+.datepicker {
+  background-color: #fff;
+  border-radius: 0 !important;
+  padding: 15px 20px !important;
+  align-content: center !important;
+  margin-top: 80px;
+  margin-left: -20px;
+}
+/* 달력 박스 위치 조절하는건데 없는게 더 나은 듯 */
+/* .datepicker-dropdown {
+  top: 0;
+  left: calc(50% - 161px) !important
+} */
+
+.ui-datepicker{
+  margin-left: -100px;
+  z-index: 1000;
+}
+/* 달력 위에 화살표 부분 */
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: calc(50% - 6px) !important
+}
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: calc(50% - 5px) !important
+}
+
+.datepicker table tr td.today,
+span.focused {
+  border-radius: 50% !important;
+  background-image: linear-gradient(#FFF3E0, #FFE0B2)
+}
+
+.datepicker table tr td.today.range {
+  background-image: linear-gradient(#eeeeee, #eeeeee) !important;
+  border-radius: 100 !important
+}
+thead tr:nth-child(3) th {
+  font-weight: bold !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.old,
+.day,
+.new {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 1px !important;
+  border: 1px solid lightgrey !important
+}
+
+.day.old,
+.day.new {
+  background-color: #F5F5F5 !important;
+  color: #E0E0E0 !important
+}
+
+.day.old:hover,
+.day.new:hover {
+  border-radius: 0px !important
+}
+
+.old-day:hover,
+.day:hover,
+.new-day:hover,
+.month:hover,
+.year:hover,
+.decade:hover,
+.century:hover {
+  border-radius: 50% !important;
+  background-color: #eee
+}
+/* 달력에서 기간 선택 버튼 css */
+
+.range-start,
+.range-end {
+    border-radius: 50% !important;
+    background-image: linear-gradient(#37517e, #37517e) !important
+}
+
+.range {
+    /* color: #4CAF50 !important */
+    color: #37517e !important
+}
+
+.prev,
+.next,
+.datepicker-switch {
+    border-radius: 0 !important;
+    padding: 10px 10px 10px 10px !important;
+    font-size: 18px;
+    opacity: 0.7;
+    color: #7286b1
+}
+
+.prev:hover,
+.next:hover,
+.datepicker-switch:hover {
+    background-color: inherit !important;
+    opacity: 50
+}
+@media screen and (max-width: 500px) {
+  .datepicker-dropdown.datepicker-orient-right:before {
+      right: calc(50% - 6px) !important
+  }
+
+  .datepicker-dropdown.datepicker-orient-right:after {
+      right: calc(50% - 5px) !important
+  }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -118,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header.header-scrolled, #header.header-inner-pages {
   background: rgba(40, 58, 90, 0.9);
+  /* background: black; */
 }
 
 #header .logo {
@@ -372,6 +536,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 80vh;
   background: #37517e;
+  /* background: #ffc107; */
+  /* background: #568A35; */
 }
 
 #hero .container {
@@ -402,12 +568,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px 0 0 0;
-  color: #fff;
-  background: #47b2e4;
+  color: black;
+  /* background: #47b2e4; */
+  background: #fff;
 }
 
 #hero .btn-get-started:hover {
-  background: #209dd8;
+  background: #f0d663;
 }
 
 #hero .btn-watch-video {
@@ -506,6 +673,7 @@ section {
 
 .section-bg {
   background-color: #f3f5fa;
+  /* background-color: #F7F9E7; */
 }
 
 .section-title {
@@ -521,6 +689,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: #37517e;
+  /* color: #305A14; */
 }
 
 .section-title h2::before {
@@ -548,7 +717,204 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+/*--------------------------------------------------------------
+# Login Page
+--------------------------------------------------------------*/
+.wrap {
+  width: 100%;
+  /* height: 100vh; */
+  /* display: flesx; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* background: rgba(0, 0, 0, 0.1); */
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
 
+.login {
+  width: 550px;
+  height: 500px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+.login_id {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_id input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_pw {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_pw input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_etc {
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.login-join{
+  width: 550px;
+  height: 250px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  margin-top: 100px;
+  /* top: 100px;
+  margin-bottom: 100px; */
+}
+
+
+.submit {
+  margin-top: 50px;
+  width: 80%;
+}
+.submit input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+/*--------------------------------------------------------------
+# join, 회원가입
+--------------------------------------------------------------*/
+.join-black-bg {
+  width : 100%;
+  height : 100%;
+  position : fixed;
+  background : rgba(0,0,0,0.5);
+  z-index : 5;
+  padding: 30px;
+  visibility : hidden;
+  opacity : 0;
+  transition : all 1s;
+  /* transform: translate(0%, -70%); */
+}
+
+.join-white-bg {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  height: 700px;
+  width: 600px;
+  font-family:sans-serif;
+  /* transform: translate(0%, 50%); */
+  /* display: grid; */
+  /* place-items: center; */
+
+  position: absolute;
+  top: 15%;
+  left:40%;
+  /* margin:-50px 0 0 -50px; */
+} 
+
+.join-show-modal {
+  visibility : visible;
+  opacity : 1;
+}
+
+.join-colse-modal{
+  visibility: hidden;
+}
+
+.join-col{
+  text-align: center;
+}
+.join-Form h2{
+  font-size: 3em;
+  color: black;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.join-container{
+  position:absolute;
+  padding-right: 40px;
+  width:500px;
+  height:400px;
+  text-align:center;
+  transform: translate(12%,5%);
+  border-radius: 15px;
+}
+
+.join-textForm{
+  border-bottom: 2px solid #adadad;
+  padding-top: 25px;
+  /* padding: 10px 10px; */
+}
+
+.join-text{
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:40px;
+  background: none;
+}
+
+.join-button{
+  position:relative;
+  left:40%;
+  transform: translate(-90%, 40%);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  width:80%;
+  height:40px;
+  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
+}
+.join-button:hover{
+  background-position: right;
+}
 /*--------------------------------------------------------------
 # Cliens
 --------------------------------------------------------------*/
@@ -837,6 +1203,7 @@ section {
 }
 
 .services .icon-box .icon i {
+  /* color: #47b2e4; */
   color: #47b2e4;
   font-size: 36px;
   transition: 0.3s;
@@ -868,25 +1235,26 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Cta
+# start
 --------------------------------------------------------------*/
-.cta {
+.start {
   background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  /* background: linear-gradient(#194350ef, #194350ec), url("../img/cta-bg.jpg") fixed center center; */
   background-size: cover;
   padding: 120px 0;
 }
 
-.cta h3 {
+.start h3 {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
 }
 
-.cta p {
+.start p {
   color: #fff;
 }
 
-.cta .cta-btn {
+.start .start-btn {
   font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -900,20 +1268,20 @@ section {
   color: #fff;
 }
 
-.cta .cta-btn:hover {
+.start .start-btn:hover {
   background: #47b2e4;
   border: 2px solid #47b2e4;
 }
 
 @media (max-width: 1024px) {
-  .cta {
+  .start {
     background-attachment: scroll;
   }
 }
 
 @media (min-width: 769px) {
-  .cta .cta-btn-container {
-    display: flex;
+  .start .start-btn-container {
+    /* display: flex; */
     align-items: center;
     justify-content: flex-end;
   }
@@ -1175,16 +1543,43 @@ section {
 # Pricing
 --------------------------------------------------------------*/
 .pricing .row {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .pricing .box {
-  padding: 60px 40px;
+  padding: 10px 40px;
   box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
   background: #fff;
-  height: 100%;
+  /* height: 100%; */
   border-top: 4px solid #fff;
   border-radius: 5px;
+}
+/* 거래내역 더보기 버튼css */
+.break-more{
+  width: 150px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+}
+.break-more-position{
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.check-histr{
+  display: none;
+}
+
+.breakdown-left{
+  text-align: left;
+}
+.breakdown-right{
+  text-align: right;
 }
 
 .pricing h3 {
@@ -1278,7 +1673,7 @@ section {
 
 @media (max-width: 992px) {
   .pricing .box {
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto 30px auto;
   }
 }
@@ -1615,6 +2010,7 @@ section {
   color: #4668a2;
   content: "/";
 }
+
 
 /*--------------------------------------------------------------
 # Footer

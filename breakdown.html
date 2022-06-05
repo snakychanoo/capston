@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Inner Page - Arsha Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- calendar CSS File -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+  <!-- 아래 cdn 필요없을 것 같은데 일단 주석처리 -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>   -->
+
+  <!--외부 자바스크립트 파일 불러오기-->
+  <script type="text/javascript" src="C:\Users\user\capston_1\node_modules\web3\dist\web3.min.js"></script>
+  <script type="text/javascript" src="total.js"></script>
+  <script src="total.js"></script>
+
+  <!-- 외부 자바스크립트 파일 불러오기 test -->
+  <!-- <script type="text/javascript" src="C:\2022-1C\capston3\arsha_2\assets\js\test.js"></script> -->
+  <!-- <script src="C:\2022-1C\capston3\arsha_2\assets\js\test.js"></script> -->
+  <!-- <script type="module" src="test.js"></script> -->
+  <script type="text/javascript" src="test.js"></script>
+  <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">돈땃쥐미</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">service</a></li>
+          <li><a class="nav-link scrollto" href="breakdown.html">거래내역</a></li>
+          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>거래내역 확인</li>
+        </ol>
+        <h2>거래내역 확인</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+
+      <!-- ======= 거래내역 확인 Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>OOO의 거래 내역</h2>
+          <!-- 달력, 조회 등 화면 좁아지면 dropdown으로 -->
+          <!-- 달력/거래내역 조회 기간 선택 -->
+          <div class="cal-container px-1 px-sm-5 mx-auto">
+            <form autocomplete="off">
+                <div class="flex-row d-flex justify-content-center">
+                  <div>
+                    <div class="input-group input-daterange"> 
+                      <input type="text" class="col-lg-6 cal form-control cal-position" placeholder="Start Date" readonly> 
+                      <input type="text" class="col-lg-6 cal form-control cal-position" placeholder="End Date" readonly>
+                      <!-- 버튼은 onclick말고 js의 이벤트리스너 사용하기 -->
+                      <!-- 특정 기간을 전송하는 것이므로 버튼 type은 submit인 것 같음 -->
+                      <button type="submit" class="col-lg-2 btn btn-outline-secondary" onclick="">조회</button>
+                    </div>
+                  </div>
+                </div>
+            </form>
+          </div>
+          <!-- 달력.js -->
+          <script>
+            // jquery
+            $(document).ready(function(){
+              $('.input-daterange').datepicker({
+              format: 'yyyy-mm-dd',
+              autoclose: true
+              });
+            });
+          </script>
+          <!-- --------달력 END --------- -->
+          <p>여기는 기간 선택, 조회 버튼 등이 들어갈 예정임. 화면이 작을 때는 dropdown으로</p>
+          <p>아래 잔액 함수써야할 것 같음</p>
+        </div>
+
+        <div class="row">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="box featured">
+              <div class="row">
+                <div class="col breakdown-left">
+                  <!-- <button onclick="getBalance()">날짜와 시간</button> -->
+                  <p id="output_dateTime">날짜 및 시간</p>
+                  <p id="output_receiver"> 받은 사람 : </p>
+                  <p id="output_giver"> 보낸 사람 : </p>
+                </div>
+                <div class="col breakdown-right">
+                  <p id="output_deposit"> : 입금 내역 </p>
+                  <p id="output_withdraw"> : 출금 내역 </p>
+                  <p id="ouput_ether"> : 현재 잔액 </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <div class="row">
+                <div class="col breakdown-left">
+                  <p >날짜 및 시간</p>
+                  <p> 사용처 </p>
+                </div>
+                <div class="col breakdown-right">
+                  <p>출금/입금</p>
+                  <p>사용 금액</p>
+                  <p>잔액(+/- 사용금액)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="check-histr">
+            <div class="box featured">
+              <div class="row">
+                <div class="col breakdown-left">
+                  <p >날짜 및 시간</p>
+                  <p> 사용처 </p>
+                </div>
+                <div class="col breakdown-right">
+                  <p>출금/입금</p>
+                  <p>사용 금액</p>
+                  <p>잔액(+/- 사용금액)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 더보기 버튼 생성 -->
+          <button type="button" class="break-more break-more-position btn btn-lg btn-outline-secondary col-lg-2">
+            더보기 <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      
+
+      <!-- 더보기 클릭시 동작 jquery -->
+      <script>
+        // jquery
+        // 더보기 클릭 >> 클래스가 check-histr인 html이 뜸
+        $(function(){
+          $('.break-more').click(function(){
+            $('.check-histr').fadeIn(500);
+          })
+        });
+      </script>
+    <!-- 날짜 및 시간 가져오기 js -->
+      <script type="text/javascript">   
+        // 거래내역 페이지가 다 로드되면 다음 함수 실행 
+        // 날짜 및 시간
+        window.onload = function(){
+          // date
+          async function date(){
+            var date=await getBalance();
+            console.log(date);
+            document.getElementById("output_dateTime").innerHTML= date;
+          }
+          // etc_info
+          async function etc_info(){
+            // 배열 준비
+            var infoValue=new Array();
+            infoValue=await getInfo();
+            // 입금금액, 출금금액, 주는사람, 받는사람
+            var value=infoValue[0];
+            var price=infoValue[1];
+            var from=infoValue[2];
+            var to=infoValue[3];
+            var ether=infoValue[4];
+            // 콘솔로 확인
+            console.log("나머지 값들 : "+value+","+price+","+from+","+to);
+            //html로 보냄
+            document.getElementById("output_deposit").prepend(value);     // 입금 금액
+            document.getElementById("output_withdraw").prepend(price);     // 출금 금액
+            document.getElementById("output_giver").append(from);     // 주는 사람
+            document.getElementById("output_receiver").append(to);        // 받는 사람
+            document.getElementById("ouput_ether").prepend(ether);        // 잔액, 이더값
+          }
+          // 함수 호출
+          date();
+          etc_info();
+        }
+
+        
+      </script>
+    </section><!-- End 거래내역 확인 Section -->
+  </section><!-- End innerpage Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- ionicons, 아이콘 사용 위한 cdn -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- <script type="module" src="test.js"></script> -->
+<script type="text/javascript" src="test.js"></script>
+</body>
+
+</html>
